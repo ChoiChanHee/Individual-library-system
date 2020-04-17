@@ -1,0 +1,140 @@
+ME : Aiden
+PHONE NUM : 01078945312
+BIRTH DAY : 19/11/1977
+ID : sd88ryre6
+PW : iuoytu5
+PREFER GENRE : F
+=============================
+NAME : Ava
+PHONE NUM : 01004321813
+BIRTH DAY : 04/01/1999
+ID : asd456
+PW : qwe7778z
+PREFER GENRE : N
+=============================
+NAME : Benjamin
+PHONE NUM : 01021347893
+BIRTH DAY : 19/03/1985
+ID : qweqssd
+PW : 12548e
+PREFER GENRE : S
+=============================
+NAME : Chloe
+PHONE NUM : 01001584432
+BIRTH DAY : 11/08/2010
+ID : tytrwers5123
+PW : wey8r8t
+PREFER GENRE : N
+=============================
+NAME : Elijah
+PHONE NUM : 01066529875
+BIRTH DAY : 30/01/1970
+ID : etruyrt331
+PW : sdf8we55
+PREFER GENRE : N
+=============================
+NAME : Ella
+PHONE NUM : 01078905123
+BIRTH DAY : 01/12/1992
+ID : u8ytoyuhgj
+PW : vd5465
+PREFER GENRE : M
+=============================
+NAME : Emily
+PHONE NUM : 01041064235
+BIRTH DAY : 24/06/1999
+ID : basfer123
+PW : bb874d
+PREFER GENRE : M
+=============================
+NAME : Ethan
+PHONE NUM : 01000114886
+BIRTH DAY : 27/08/2003
+ID : fsdyerq
+PW : 848thfdg
+PREFER GENRE : N
+=============================
+NAME : Isabella
+PHONE NUM : 0104846872
+BIRTH DAY : 10/12/2000
+ID : nkjlzxc
+PW : 9iewjr
+PREFER GENRE : N
+=============================
+NAME : James
+PHONE NUM : 01035981697
+BIRTH DAY : 04/04/2000
+ID : xxcvhuyu6
+PW : 8errd12
+PREFER GENRE : B
+=============================
+NAME : Liam
+PHONE NUM : 01011112222
+BIRTH DAY : 11/11/1998
+ID : aaa
+PW : bbb
+PREFER GENRE : N
+=============================
+NAME : Logan
+PHONE NUM : 01087895156
+BIRTH DAY : 29/02/2000
+ID : jdkkxc2323
+PW : kowef0es
+PREFER GENRE : B
+=============================
+NAME : Lucas
+PHONE NUM : 01087211507
+BIRTH DAY : 24/06/1999
+ID : nmxcvx15
+PW : 4sdfsdfe
+PREFER GENRE : S
+=============================
+NAME : Mason
+PHONE NUM : 01004895732
+BIRTH DAY : 12/05/1993
+ID : 1wefsd5
+PW : qwe56as
+PREFER GENRE : S
+=============================
+NAME : Mia
+PHONE NUM : 01045487496
+BIRTH DAY : 06/04/2000
+ID : 004sdf8qwer
+PW : 1xcv8e
+PREFER GENRE : C
+=============================
+NAME : Noah
+PHONE NUM : 01054658721
+BIRTH DAY : 22/05/1995
+ID : lgkfgf34
+PW : mklzxv
+PREFER GENRE : S
+=============================
+NAME : Oliver
+PHONE NUM : 01078004423
+BIRTH DAY : 20/09/1995
+ID : 2185sdzxc
+PW : 41zxca
+PREFER GENRE : C
+=============================
+NAME : Olivia
+PHONE NUM : 01078921468
+BIRTH DAY : 01/06/1997
+ID : wwqe7s8
+PW : zxc1as48
+PREFER GENRE : C
+=============================
+NAME : Ray
+PHONE NUM : 01042718383
+BIRTH DAY : 11/22/1000
+ID : cksgml5288
+PW : cksgml5288**
+PREFER GENRE : M
+=============================
+NAME : Sophia
+PHONE NUM : 01048191248
+BIRTH DAY : 07/04/2006
+ID : mmxcvxajs
+PW : lrelfs
+PREFER GENRE : F
+
