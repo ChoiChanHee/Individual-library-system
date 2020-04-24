@@ -3,7 +3,7 @@
 #include "extras.h"
 #include <stdlib.h>
 #include <string.h>
-// Function: print_all_records()
+// Function: void read_DF()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: none
 // - Leave a brief information about the function
