@@ -35,7 +35,7 @@ int defragment(Record a[], int n, int *c){
 // Function: add_a_record()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: none
-// - 이름순으로 sorting
+// - sorting by name order
 void sorting_data(Record a[], int c){
 	// TODO: Modify this function as you need
   int n=0;
@@ -100,6 +100,10 @@ void sorting_data(Record a[], int c){
 
 // TODO: Add more functions to fulfill the optional requirements
 
+// Function: void the_most_like_genre()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// - show the most selected genre among the genres users have entered when signing up.
 void the_most_like_genre(Record a[], int c){
   int check[SIZE];
   for(int i=0; i<c; i++){
@@ -238,4 +242,145 @@ void the_most_like_genre(Record a[], int c){
       } 
       printf("\n");
     }
+  
+// Function: Login()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: i or -1
+// - when user input id and pw exist in thr record, show the another place to do something.
+int Login(Record save[], int count){
+  char c_id[SIZE];
+  char c_pw[SIZE];
+printf("Enter your id: ");
+scanf("%s", c_id);
+printf("Enter your password: ");
+scanf("%s", c_pw);
 
+for(int i=0; i<count; i++){
+  if(!(strcmp(save[i].id, c_id))){
+    if(!(strcmp(save[i].pw, c_pw))){
+      printf("\nWelcome, %s", save[i].name);
+    return i;
+    }
+  }
+}
+return -1;
+}
+// Function: add_book()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// - after login, if user select add_book, user can enter the tile of book. the input will be stored in under of directory "book", "Username.txt". 
+void add_book(Record a[], int n, int c){
+
+FILE*fp =NULL;
+char fname[MAX]="";
+  strncat(fname, "book/", 5);
+  strncat(fname, (a[n].name), strlen((a[n].name)));
+  strncat(fname, ".txt", 4);
+  
+  fp= fopen(fname, "a");
+
+    if(fp ==NULL){
+    printf("\nnone. Add books!\n");
+      return;
+    }
+  printf("Write the book's name. \n* use underbar instead of spacebar*\n ex) The_Old_Man_and_The_Sea: ");
+  char save[MAX]="";
+
+  scanf("%s", save);
+  fprintf(fp, "%s ", save);
+
+
+  fclose(fp);
+printf("\n");
+}
+
+// Function: show_lib()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// - after login, if user select show_lib, user can see what he/she added. if there is not a file of username or it's empty, print out error messeage 
+void show_lib(Record a[], int n, int c){
+
+  char fname[MAX]="";
+  char show[MAX]="";
+
+  FILE*fp =NULL;
+  strncat(fname, "book/", 5);
+  strncat(fname, (a[n].name), strlen((a[n].name)));
+  strncat(fname, ".txt", 4);
+  
+  fp= fopen(fname, "r");
+
+    if(fp ==NULL){
+    printf("\nNONE\n");
+      return;
+    }
+
+  int q=0;
+  while(1){
+  q= fscanf(fp, "%s", show);
+  if(q==0){
+    printf("\nNONW\n");
+  }
+  if(q==EOF)
+  break;
+   printf("%s ", show);
+  }
+  fclose(fp);
+printf("\n");
+}
+
+// Function: delete_book()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// - after login, if user select delete_book, user can delete the book what they added. but if there is not a file of username or there are not any contentes, print out error. 
+void delete_book(Record a[], int n, int c){
+
+   char fname[MAX]="";
+  char show[MAX]="";
+  char input[MAX]="";
+  FILE*fp =NULL;
+  FILE*save =NULL;
+  strncat(fname, "book/", 5);
+  strncat(fname, (a[n].name), strlen((a[n].name)));
+  strncat(fname, ".txt", 4);
+  
+  fp= fopen(fname, "r");
+    if(fp ==NULL){
+    printf("\nNONE\n");
+      return;
+    }
+
+  int q=0;
+  while(1){
+  q= fscanf(fp, "%s", show);
+  if(q==0){
+    printf("\nNONW\n");
+    return;
+  if(q==EOF)
+  break;
+   printf("%s ", show);
+  }
+  }
+fclose(fp);
+ fp= fopen(fname, "r");
+ save= fopen("book/save_data.txt", "w");
+ printf("\nEnter a title of book to delete: ");
+  scanf("%s", input);
+  int r=0;
+  show[0]='\0';
+  while(1){
+  r= fscanf(fp, "%s", show);
+   if(r==EOF){
+    printf("DONE");
+    break;
+  }
+  if((strcmp(show, input)))
+  fprintf(save, "%s ", show);
+
+  }
+
+  fclose(fp);
+  remove(fname);
+  fclose(save);
+  rename("book/save_data.txt", fname);
+}
