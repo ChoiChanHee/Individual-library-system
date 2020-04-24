@@ -8,6 +8,7 @@
 #define MAX_RECORDS 1000
 
 // function prototypes
+int display_login(Record a[], int n, int *c);
 void input_handler(char[], Record[], int *count);
 void display_menu();
 
@@ -21,13 +22,6 @@ char buff[MAX];
 
   read_DF(records, &count);
 
- FILE* fp=NULL;
-  fp= fopen("member.txt", "w");
-
-  if(fp ==NULL){
-    printf("%s: file does not open.\n", "member.txt");
-    exit(-1);
-  }
 
    while(strcmp(user_input, "99") != 0){
       display_menu();
@@ -36,15 +30,9 @@ char buff[MAX];
       user_input[strlen(user_input)-1] = '\0';
       input_handler(user_input, records, &count);
    }
-   sorting_data(records, count);//sorting (extra)
-  for(int i=0; i<count; i++){
-  if(i==0)
-  fprintf(fp, "%s %s %s %s %s %s", records[i].name, records[i].p_num, records[i].bd, records[i].id, records[i].pw, records[i].book);
-   else
-     fprintf(fp, "\n%s %s %s %s %s %s", records[i].name, records[i].p_num, records[i].bd, records[i].id, records[i].pw, records[i].book);
-}
+sorting_data(records, count);//sorting (extra)
+creat_new_account_file(records, count);
 store_data(records, count);
-fclose(fp);
    return 0;
 }
 
@@ -58,7 +46,7 @@ void input_handler(char input[], Record records[], int *count){
   char buff[MAX];
   int result=0;
    if(!strcmp(input, "1")){
-   records[*count]=sign_in(records, *count);
+   records[*count]=creat_new_account(records, *count);
   (*count)++;
   }
    else if(!strcmp(input, "2")){
@@ -98,7 +86,7 @@ void display_menu(){
 
    // TODO: Modify this function as you need
    printf("******************************\n");
-   printf(" Individule library system \n");
+   printf(" Individual library system \n");
    printf("******************************\n");
    printf(" 1. Creat Account\n");
    printf(" 2. Log in\n");
@@ -106,4 +94,52 @@ void display_menu(){
    printf(" 4. Forgot Password?\n");
    printf(" 5. The most popular genre\n");
    printf(" 99. Quit\n");
+}
+
+int display_login(Record a[], int n, int *c){
+  int num=0;
+  int result=0;
+  char buff[MAX];
+ 
+ do {
+  printf("\n******************************\n");
+  printf(" 1. My account\n");
+  printf(" 2. Change informations\n");
+  printf(" 3. My liabrary\n");
+  printf(" 4. Add Book \n");
+  printf(" 5. Delete book\n");
+  printf(" 6. Delete my account\n");
+  printf(" 7. go back to menu\n");
+  printf("\nSelect a menu> ");
+  scanf("%d", &num);
+   
+  if(num==1){
+    show_the_information(a, n);
+  }
+  else if(num==2){
+    change_information(a, n, *c);
+    break;
+  }
+  else if(num==3){
+    show_lib(a, n, *c);
+  }
+  else if(num==4){
+    add_book(a, n, *c);
+  }
+  else if(num==5){
+    delete_book(a, n, *c);
+  }
+  else if(num==6){ //delete part
+    delete_account(a, n, c);
+    return 5;
+  }
+  else if(num==7){
+    scanf("%c", buff);
+    break;
+  }  
+  else
+    printf("Unknown menu: %d\n", num);
+  } while(!( num==7));
+
+  return 1;
 }
