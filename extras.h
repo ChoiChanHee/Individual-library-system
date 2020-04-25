@@ -10,5 +10,4 @@ void the_most_like_genre(Record a[], int c);
 int Login(Record a[], int c);
 void add_book(Record a[], int n, int c);
 void show_lib(Record a[], int n, int c);
-void show_lib(Record a[], int n, int c);
 #endif
