@@ -5,7 +5,7 @@
 
 
 
-// Function: void create_new_account_file()
+// Function: void creat_new_account_file()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: none
 // Create: Create a new data record from a data file
@@ -29,7 +29,7 @@ void create_new_account_file(Record save[], int c){
   fclose(fp);
 }
 
-// Function: Record create_new_account()
+// Function: Record creat_new_account()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: new data of Record structure
 // Create: Create a new record from the standard input
@@ -319,16 +319,21 @@ void delete_book(Record a[], int n, int c){
     }
 
   int q=0;
+  int count=0;
   while(1){
   q= fscanf(fp, "%s", show);
-  if(q==0){
-    printf("\nNONW\n");
+  if(count==0){
+  if(q==-1){
+    printf("\nNONE\n");
     return;
+  }
+  }
   if(q==EOF)
   break;
    printf("%s ", show);
+  count++;
   }
-  }
+int checker=0;
 fclose(fp);
  fp= fopen(fname, "r");
  save= fopen("book/save_data.txt", "w");
@@ -338,14 +343,22 @@ fclose(fp);
   show[0]='\0';
   while(1){
   r= fscanf(fp, "%s", show);
-   if(r==EOF){
+
+   if(r==EOF && checker==0){
     printf("DONE");
     break;
   }
-  if((strcmp(show, input)))
-  fprintf(save, "%s ", show);
-
+  else if (r== EOF){
+    printf("there is no book title entered");
+    break;
   }
+
+   if((strcmp(show, input))!=0){
+    fprintf(save, "%s ", show);
+    checker++;
+  }
+}
+
 
   fclose(fp);
   remove(fname);
@@ -370,6 +383,7 @@ int delete_account(Record a[], int n, int *c){
   strncat(fname, ".txt", 4);
   
   printf("Write your password agian:  ");
+  while(1){
   scanf("%s", c_pw);
   scanf("%c", buff);
 
@@ -397,10 +411,10 @@ int delete_account(Record a[], int n, int *c){
     scanf("%c", buff);
     return 0;
     }
+    
   }
-  printf("\nYour password does not match\n");
-  scanf("%c", buff);
-  return 0;
+  printf("\nYour password does not match. try again : \n");
+  }
 }
 
 // Function: void forget_pw()
