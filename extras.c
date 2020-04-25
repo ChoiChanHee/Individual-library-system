@@ -155,7 +155,7 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf("FATRION");  
+          printf("FASHION"");  
           i=5;
           continue;
           }
@@ -181,7 +181,7 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf(", FATRION");  
+          printf(", FASHION");  
           i=5;
           continue;
           }
@@ -202,7 +202,7 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf(", FATRION");  
+          printf(", FASHION");  
           i=5;
           continue;
           }
@@ -218,7 +218,7 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf(", FATRION");  
+          printf(", FASHION");  
           i=5;
           continue;
           }
@@ -229,14 +229,14 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf(", FATRION");  
+          printf(", FASHION");  
           i=5;
           continue;
           }
         }
          if(i==5) {
           if(save==check[5]){
-          printf(", FATRION");  
+          printf(", FASHION");  
           }
         }    
       } 
@@ -316,14 +316,18 @@ void show_lib(Record a[], int n, int c){
     }
 
   int q=0;
+  int count =0;
   while(1){
   q= fscanf(fp, "%s", show);
-  if(q==0){
-    printf("\nNONW\n");
+  if(count ==0){
+  if(q==-1){
+    printf("\nNONE\n");
+  }
   }
   if(q==EOF)
   break;
    printf("%s ", show);
+   count++;
   }
   fclose(fp);
 printf("\n");
