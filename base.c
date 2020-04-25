@@ -5,11 +5,11 @@
 
 
 
-// Function: void creat_new_account_file()
+// Function: void create_new_account_file()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: none
 // Create: Create a new data record from a data file
-void creat_new_account_file(Record save[], int c){
+void create_new_account_file(Record save[], int c){
 
   FILE* fp=NULL;
   fp= fopen("member.txt", "wt");
@@ -29,12 +29,12 @@ void creat_new_account_file(Record save[], int c){
   fclose(fp);
 }
 
-// Function: Record creat_new_account()
+// Function: Record create_new_account()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: new data of Record structure
 // Create: Create a new record from the standard input
 
-Record creat_new_account(Record save[], int c){
+Record create_new_account(Record save[], int c){
    // TODO: Modify this function as you need
   Record a;
   char buff[MAX];
