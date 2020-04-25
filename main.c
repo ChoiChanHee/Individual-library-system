@@ -31,7 +31,7 @@ char buff[MAX];
       input_handler(user_input, records, &count);
    }
 sorting_data(records, count);//sorting (extra)
-creat_new_account_file(records, count);
+create_new_account_file(records, count);
 store_data(records, count);
    return 0;
 }
@@ -46,7 +46,7 @@ void input_handler(char input[], Record records[], int *count){
   char buff[MAX];
   int result=0;
    if(!strcmp(input, "1")){
-   records[*count]=creat_new_account(records, *count);
+   records[*count]=create_new_account(records, *count);
   (*count)++;
   }
    else if(!strcmp(input, "2")){
