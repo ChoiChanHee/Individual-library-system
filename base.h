@@ -7,8 +7,8 @@
 #define FALSE 0
 // function prototypes
 
-void creat_new_account_file(Record save[], int c);//CREAT
-Record creat_new_account(Record save[], int c);//CREAT
+void create_new_account_file(Record save[], int c);//CREATE
+Record create_new_account(Record save[], int c);//CREATE
 
 void read_DF(Record save[], int *c);//READ
 void forget_id(Record a[], int c);//READ
