@@ -106,7 +106,7 @@ Record create_new_account(Record save[], int c){
 // Output: none
 // Read: According to user specified conditions, print a record, multiple or all records to the standard output
 void show_the_information(Record a[], int n){
-    printf("\nyour name is: %s\nyour birth day is: %s\nyour phone number is: %s\n", a[n].name, a[n].bd, a[n].p_num);
+    printf("\nyour name is: %s\nyour birth day is: %s\nyour phone number is: %s\nyour id is: %s\nyour pw is : %s\nyour favorit genre is : %s\n", a[n].name, a[n].bd, a[n].p_num ,a[n].id ,a[n].pw, a[n].book);
 }
 
 // Function: forget_id()
@@ -174,7 +174,7 @@ void store_data(Record a[], int count){
 
 
   fp= fopen("a.txt", "w");
-   fprintf(fp, "%s", "N: NOVEL || M: MISTERY || S: SPORT || C: CARTOON || B: BEAUTY || F: FATRION \n");
+   fprintf(fp, "%s", "N: NOVEL || M: MISTERY || S: SPORT || C: CARTOON || B: BEAUTY || F: FASHION \n");
   for(int i=0; i<count; i++){
 
     fprintf(fp, "%s\n", "=============================");
@@ -402,7 +402,6 @@ int delete_account(Record a[], int n, int *c){
       remove(fname);
       return 1;;
     
-    return 0;
     }
     if(check=='n')
     return 0;
