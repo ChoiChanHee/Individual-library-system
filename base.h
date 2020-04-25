@@ -18,6 +18,7 @@ void store_data(Record a[], int c);//READ
 void change_information(Record a[], int n, int c);//UPDATE
 void change_pw_forget(Record a[], int c);//UPDATE
 
+void delete_book(Record a[], int n, int c);//DELETE
 int delete_account(Record a[], int n, int *c);//DELETE
 
 void forget_pw(Record a[], int c);
