@@ -130,7 +130,8 @@ int display_login(Record a[], int n, int *c){
     delete_book(a, n, *c);
   }
   else if(num==6){ //delete part
-    delete_account(a, n, c);
+    result =delete_account(a, n, c);
+    if(result == 1)
     return 5;
   }
   else if(num==7){
