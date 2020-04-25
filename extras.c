@@ -155,7 +155,7 @@ void the_most_like_genre(Record a[], int c){
           continue;
           }
           else if(save==check[5]){
-          printf("FASHION"");  
+          printf("FASHION");  
           i=5;
           continue;
           }
