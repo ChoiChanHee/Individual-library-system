@@ -91,7 +91,7 @@ Record create_new_account(Record save[], int c){
   a.pw[strlen(d)]='\0';
   strncpy(a.pw, d, strlen(d));
 
-  printf("Which genre do you like? \n(NOVEL : N)(MISTERY : M)\n(SPORT : S)(CARTOON : C)\n(BEAUTY : B)(FATRION : F) : ");
+  printf("Which genre do you like? \n(NOVEL : N)(MISTERY : M)\n(SPORT : S)(CARTOON : C)\n(BEAUTY : B)(FASHION : F) : ");
   scanf("%s", d);
   scanf("%c", buff);
   a.book[strlen(d)]='\0';
