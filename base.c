@@ -297,6 +297,62 @@ void change_pw_forget(Record a[], int n){
     }
 }
 
+// Function: delete_book()
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// Delete: Delete a record, multiple or all records
+void delete_book(Record a[], int n, int c){
+
+   char fname[MAX]="";
+  char show[MAX]="";
+  char input[MAX]="";
+  FILE*fp =NULL;
+  FILE*save =NULL;
+  strncat(fname, "book/", 5);
+  strncat(fname, (a[n].name), strlen((a[n].name)));
+  strncat(fname, ".txt", 4);
+  
+  fp= fopen(fname, "r");
+    if(fp ==NULL){
+    printf("\nNONE\n");
+      return;
+    }
+
+  int q=0;
+  while(1){
+  q= fscanf(fp, "%s", show);
+  if(q==0){
+    printf("\nNONW\n");
+    return;
+  if(q==EOF)
+  break;
+   printf("%s ", show);
+  }
+  }
+fclose(fp);
+ fp= fopen(fname, "r");
+ save= fopen("book/save_data.txt", "w");
+ printf("\nEnter a title of book to delete: ");
+  scanf("%s", input);
+  int r=0;
+  show[0]='\0';
+  while(1){
+  r= fscanf(fp, "%s", show);
+   if(r==EOF){
+    printf("DONE");
+    break;
+  }
+  if((strcmp(show, input)))
+  fprintf(save, "%s ", show);
+
+  }
+
+  fclose(fp);
+  remove(fname);
+  fclose(save);
+  rename("book/save_data.txt", fname);
+}
+
 // Function: int delete_account()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: 0 or 1
