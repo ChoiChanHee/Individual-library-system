@@ -6,12 +6,13 @@ It is a system that adds and deletes books after creating accounts.
 
 ## record.h
   member of struct :   
+  
     char id[SIZE];   
     char pw[SIZE];   
     char name[SIZE];   
-    char p_num[SIZE];//phone number   
-    char bd[SIZE];//birth day   
-    char book[MAX];//user's favorite genre   
+    char p_num[SIZE]; -> phone number   
+    char bd[SIZE]; -> birth day   
+    char book[MAX]; -> user's favorite genre   
 
 ***
 
