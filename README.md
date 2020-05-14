@@ -1,6 +1,6 @@
-Individual-library-system
+Individual-Library-System
 =========================
-It is a system that adds and deletes books after creating accounts.
+It is a system that adds and deletes books after login with a account.
 
 ***
 
