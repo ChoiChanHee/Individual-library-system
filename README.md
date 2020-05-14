@@ -73,5 +73,5 @@ It is a system that adds and deletes books after creating accounts.
     5. void add_book()   
       --> after login, if user select add_book, user can enter the tile of book. the input will be stored in under                                 of directory "book", "Username.txt"   
     6. void show_lib()   
-    --> after login, if user select show_lib, user can see what he/she added. if there is not a file of username                                 or it's empty, print out error messeage   
+      --> after login, if user select show_lib, user can see what he/she added. if there is not a file of username                                 or it's empty, print out error messeage   
  ***
