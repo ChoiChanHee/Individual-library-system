@@ -16,7 +16,7 @@ It is a system that adds and deletes books after creating accounts.
 
 ***
 
-## **CRUD**
+## **CRUD & EXTRAS**
 
   ### CREATE
   
