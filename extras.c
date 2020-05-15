@@ -332,3 +332,17 @@ void show_lib(Record a[], int n, int c){
   fclose(fp);
 printf("\n");
 }
+
+// Function : show_user()
+// Input : Record records
+// Output : none
+// shows all user who are interested in specific genre
+void show_user(Record records[], int c){
+  char to_find[1024];
+  fgets(to_find,1024,stdin);
+  for (int i=0;i<c;i++){
+    if (strcmp(to_find,records[i].book)){
+      printf("%s\n",records[i].name);
+    }
+  }
+}
